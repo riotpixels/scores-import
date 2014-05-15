@@ -23,7 +23,7 @@ function callback(){
 
         var res = [];
         $('table#list_table').find('td script').each(function(i, el){
-            var row = $(el).text();
+            var row = $(el).html();
             var re = /user_game_scores\((\d+)\s*,\s*(\d+)\);/i;
             var match = row.match(re);
             if(match){
